@@ -32,17 +32,42 @@ persist.data.qmi.adb_logmask=0
 persist.audio.fluence.voicecall=true
 persist.audio.fluence.voicerec=false
 persist.audio.fluence.speaker=true
-ro.qc.sdk.audio.fluencetype=fluence
+ro.qc.sdk.audio.fluencetype=none
 ro.qc.sdk.audio.ssr=false
 persist.audio.ssr.3mic=false
 media.aac_51_output_enabled=true
-audio.offload.pcm.16bit.enable=false
+audio.offload.pcm.16bit.enable=true
 audio.offload.pcm.24bit.enable=true
 use.voice.path.for.pcm.voip=true
-audio.offload.multiple.enabled=true
+audio.offload.multiple.enabled=false
 audio.offload.gapless.enabled=true
+ro.qc.sdk.audio.ssr=false
+persist.audio.ssr.3mic=false
+ro.qc.sdk.audio.fluencetype=none
+persist.audio.fluence.voicecall=true
+persist.audio.fluence.voicerec=false
+persist.audio.fluence.speaker=true
+tunnel.audio.encode = false
+audio.offload.gapless.enabled=true
+audio.offload.buffer.size.kb=32
+audio.offload.video=true
+audio.offload.pcm.16bit.enable=false
+audio.offload.passthrough=false
+audio.offload.multiple.enabled=false
+audio.offload.pcm.24bit.enable=true
+audio.deep_buffer.media=true
+
+# Media
 mm.enable.smoothstreaming=true
 audio.offload.buffer.size.kb=1024
+audio.dolby.ds2.enabled=true
+audio.dolby.ds2.hardbypass=true
+audio.offload.passthrough=false
+persist.dpm.feature=1
+tunnel.audio.encode=false
+av.debug.disable.pers.cache=true
+ro.audio.flinger_standbytime_ms=300
+audio.deep_buffer.media=true
 
 # Bluetooth
 bluetooth.hfp.client=1
@@ -75,9 +100,9 @@ persist.sys.dpmd.nsrm=3
 #persist.dpm.nsrm.bkg.evt=3955
 #persist.dpm.loglevel=7825
 
-# Dex2oat - limit threads to improve thermals
-dalvik.vm.boot-dex2oat-threads=4
+# Dexopt
 dalvik.vm.dex2oat-threads=2
+dalvik.vm.boot-dex2oat-threads=4
 dalvik.vm.image-dex2oat-threads=4
 
 # GPS
@@ -89,6 +114,13 @@ ro.pip.gated=0
 # Graphics
 persist.hwc.mdpcomp.enable=true
 dalvik.vm.heapsize=36m
+persist.mdpcomp.4k2kSplit=1
+persist.hwc.mdpcomp.maxpermixer=5
+persist.mdpcomp_perfhint=50
+debug.mdpcomp.logs=0
+persist.hwc.ptor.enable=true
+dev.pm.dyn_samplingrate=1
+persist.demo.hdmirotationlock=false
 ro.qualcomm.cabl=0
 ro.sf.lcd_density=480
 ro.opengles.version=196609

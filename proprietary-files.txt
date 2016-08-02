@@ -336,6 +336,7 @@ vendor/lib64/libmm-disp-apis.so
 vendor/lib64/librs_adreno.so
 vendor/lib64/librs_adreno_sha1.so
 vendor/lib64/libscale.so
+vendor/lib64/libuiblur.so
 
 # Graphics firmware
 etc/firmware/a420_pfp.fw
@@ -377,6 +378,7 @@ etc/firmware/venus.mbn
 etc/firmware/venus.mdt
 
 # Perf
+bin/energy-awareness
 bin/msm_irqbalance
 vendor/bin/perfd
 vendor/lib/libqti-perfd-client.so
@@ -440,7 +442,7 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libsmemlog.so
 
 # Radio
--app/QtiTelephonyService/QtiTelephonyService.apk
+-app/fastdormancy/fastdormancy.apk
 -app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
@@ -451,8 +453,6 @@ etc/permissions/qcnvitems.xml
 etc/permissions/qcrilhook.xml
 -framework/qcnvitems.jar
 -framework/qcrilhook.jar
-framework/qti-telephony-common.jar
-framework/QtiTelephonyServicelibrary.jar
 lib64/libparam.so
 -priv-app/qcrilmsgtunnel/qcrilmsgtunnel.apk
 -vendor/lib/libmdmdetect.so
@@ -460,7 +460,6 @@ vendor/lib64/libconfigdb.so
 vendor/lib64/liblqe.so
 -vendor/lib64/libmdmdetect.so
 vendor/lib64/libnetmgr.so
-vendor/lib64/librcc.so
 vendor/lib64/libril-qc-qmi-1.so
 vendor/lib64/libril-qc-radioconfig.so
 vendor/lib64/libril-qcril-hook-oem.so
