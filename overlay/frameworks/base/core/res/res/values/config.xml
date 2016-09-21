@@ -59,11 +59,11 @@
     </integer-array>
 
     <!-- Minimum screen brightness allowed by the power manager. -->
-    <integer name="config_screenBrightnessDim">6</integer>
+    <integer name="config_screenBrightnessDim">3</integer>
 
     <!-- Minimum screen brightness setting allowed by the power manager.
          The user is forbidden from setting the brightness below this level. -->
-    <integer name="config_screenBrightnessSettingMinimum">1</integer>
+    <integer name="config_screenBrightnessSettingMinimum">3</integer>
 
     <!-- Default screen brightness setting.
          Must be in the range specified by minimum and maximum. -->
@@ -71,16 +71,19 @@
 
     <!-- Does the notification LED support multiple colors?
          Used to decide if the user can change the colors -->
+    <add-resource type="bool" name="config_multiColorNotificationLed"></add-resource>
     <bool name="config_multiColorNotificationLed">true</bool>
 
     <!-- Does the battery LED support multiple colors?
          Used to decide if the user can change the colors -->
+    <add-resource type="bool" name="config_multiColorBatteryLed"></add-resource>
     <bool name="config_multiColorBatteryLed">true</bool>
 
     <!-- Is the notification LED intrusive? Used to decide if there should be a disable option -->
     <bool name="config_intrusiveNotificationLed">true</bool>
 
     <!-- Is the battery LED intrusive? Used to decide if there should be a disable option -->
+    <add-resource type="bool" name="config_intrusiveBatteryLed"></add-resource>
     <bool name="config_intrusiveBatteryLed">true</bool>
 
     <!-- Button illumination -->
@@ -140,7 +143,7 @@
             32 - Camera
             64 - Volume rocker
          For example, a device with Home, Back and Menu keys would set this
-         config to 7. 
+         config to 7.
     <integer name="config_deviceHardwareWakeKeys">64</integer> -->
 
     <!-- Control the behavior when the user long presses the home button
@@ -388,10 +391,7 @@
          so that applications can still use their own mechanisms. -->
     <bool name="config_enableAutoPowerModes">true</bool>
 
+    <add-resource type="integer" name="config_buttonBrightnessSettingDefault"></add-resource>
     <integer name="config_buttonBrightnessSettingDefault">60</integer>
-
-    <!-- Enable overlay for all location components. -->
-    <string name="config_networkLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
-    <string name="config_fusedLocationProviderPackageName" translatable="false">com.qualcomm.location</string>
 
 </resources>

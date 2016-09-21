@@ -110,7 +110,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     camera.msm8994 \
     sensors.hal.tof \
-    Snap
+    SnapdragonCamera
 
 # Charger
 PRODUCT_PACKAGES += \
@@ -145,10 +145,6 @@ PRODUCT_PACKAGES += \
 # Fingerprint sensor
 PRODUCT_PACKAGES += \
     fingerprintd
-
-# Gello
-PRODUCT_PACKAGES += \
-    Gello
 
 # GPS
 PRODUCT_PACKAGES += \
