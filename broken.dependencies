@@ -13,9 +13,9 @@
   },
   {
     "remote":     "github",
-    "repository": "TheMuppets/proprietary_vendor_oneplus",
+    "repository": "Seraph08/proprietary_vendor_oneplus",
     "target_path": "vendor/oneplus",
-    "revision":    "staging/cm-14.0"
+    "revision":    "cm-14.0"
   },
   {
     "remote":     "github",
