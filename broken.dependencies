@@ -15,12 +15,12 @@
     "remote":     "github",
     "repository": "Seraph08/proprietary_vendor_oneplus",
     "target_path": "vendor/oneplus",
-    "revision":    "cm-14.0"
+    "revision":    "n7.0"
   },
   {
     "remote":     "github",
-    "repository": "BrokenROM/packages_apps_SnapdragonCamera",
+    "repository": "Seraph08/packages_apps_SnapdragonCamera",
     "target_path": "packages/apps/SnapdragonCamera",
-    "revision":    "n7.0"
+    "revision":    "caf"
   }
 ]
