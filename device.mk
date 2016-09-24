@@ -243,7 +243,7 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/sensors/hals.conf:system/etc/sensors/hals.conf \
-
+    
 # USB
 PRODUCT_PACKAGES += \
     com.android.future.usb.accessory
