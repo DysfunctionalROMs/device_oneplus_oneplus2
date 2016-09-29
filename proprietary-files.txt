@@ -1,3 +1,12 @@
+# ACDB
+etc/acdbdata/MTP/MTP_Bluetooth_cal.acdb
+etc/acdbdata/MTP/MTP_General_cal.acdb
+etc/acdbdata/MTP/MTP_Global_cal.acdb
+etc/acdbdata/MTP/MTP_Handset_cal.acdb
+etc/acdbdata/MTP/MTP_Hdmi_cal.acdb
+etc/acdbdata/MTP/MTP_Headset_cal.acdb
+etc/acdbdata/MTP/MTP_Speaker_cal.acdb
+
 # ADSP
 bin/adsprpcd
 vendor/lib/libadsprpc.so
@@ -222,6 +231,9 @@ vendor/lib64/libcneqmiutils.so
 vendor/lib64/libvendorconn.so
 vendor/lib64/libwqe.so
 vendor/lib64/libxml.so
+
+# Display calibration
+-etc/pp_calib_data_jd35695_1080p_cmd_mode_dsi_panel.xml
 
 # DPM
 bin/dpmd
@@ -472,11 +484,8 @@ vendor/lib64/libqmi_encdec.so
 vendor/lib64/libsmemlog.so
 
 # Radio
--app/datastatusnotification/datastatusnotification.apk|35b7c2f41662465d056703c257ec5cc1fef75b4f
--app/fastdormancy/fastdormancy.apk|80f660bc74b3d7fc99987422f5ef624e1e6b4224
--app/QtiTelephonyService/QtiTelephonyService.apk|4610d741cedd4e784011915b16f3f4879cd2e19b
--app/shutdownlistener/shutdownlistener.apk|e35de2893b60e52cc9f2cb2c6211ccf7db92ed6f
-bin/ipacm-diag
+-app/fastdormancy/fastdormancy.apk
+-app/shutdownlistener/shutdownlistener.apk
 bin/netmgrd
 bin/qmuxd
 bin/radish
@@ -554,7 +563,7 @@ vendor/lib64/libsensor_user_cal.so
 vendor/lib64/sensors.ssc.so
 
 # Thermal
-etc/thermal-engine.conf:etc/thermal-engine-8994.conf
+etc/thermal-engine.conf
 vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
 vendor/lib64/libthermalclient.so
