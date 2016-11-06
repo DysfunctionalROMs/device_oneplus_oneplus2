@@ -159,6 +159,9 @@ TARGET_PROVIDES_KEYMASTER := true
 # Lights
 TARGET_PROVIDES_LIBLIGHT := true
 
+# PDFIUM
+TARGET_NEEDS_PDFIUM_BIGINT := true
+
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := false
 
