@@ -102,8 +102,8 @@ PRODUCT_PACKAGES += \
 # Camera
 PRODUCT_PACKAGES += \
     camera.msm8994 \
-    libshim_camera \
-    libshim_ims-camera \
+    mm-qcamera-app \
+    libmm-qcamera \
     sensors.hal.tof \
     SnapdragonCamera
 
