@@ -9,18 +9,12 @@
     "remote":     "github",
     "repository": "Seraph08/android_kernel_oneplus_msm8994",
     "target_path": "kernel/oneplus/msm8994",
-    "revision":    "cm-14.1"
+    "revision":    "n7.1"
   },
   {
     "remote":     "github",
-    "repository": "TheMuppets/proprietary_vendor_oneplus",
+    "repository": "Seraph08/proprietary_vendor_oneplus",
     "target_path": "vendor/oneplus",
-    "revision":    "cm-14.1"
-  },
-  {
-    "remote":     "github",
-    "repository": "TheMuppets/proprietary_vendor_qcom_binaries",
-    "target_path": "vendor/qcom/binaries",
-    "revision":    "cm-14.1"
+    "revision":    "n7.0"
   }
 ]
