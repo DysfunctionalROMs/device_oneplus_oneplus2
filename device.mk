@@ -105,7 +105,7 @@ PRODUCT_PACKAGES += \
     mm-qcamera-app \
     libmm-qcamera \
     sensors.hal.tof \
-		SnapdragonCamera
+    SnapdragonCamera
 
 # Connectivity Engine support (CNE)
 PRODUCT_PACKAGES += \
