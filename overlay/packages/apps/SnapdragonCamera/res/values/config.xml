@@ -18,6 +18,18 @@
 <!-- Camera app resources that may need to be customized
      for different hardware or product builds. -->
 <resources>
+
+    <!-- HDR needs 1x frame -->
+    <string name="pref_camera_hdr_need_1x_default" translatable="false">false</string>
+    <string name="pref_camera_auto_hdr_default" translatable="false">enable</string>
+    <string name="pref_camera_scenedetect_default" translatable="false">on</string>
+    <string name="pref_camera_dis_default" translatable="false">enable</string>
+    <string name="pref_camera_longshot_default" translatable="false">on</string>
+    <string name="pref_video_quality_default" translatable="false">1920x1080</string>
+
+    <string name="pref_camera_scenemode_entry_sports">Burst</string>
+    <string name="pref_camera_scenemode_entry_steadyphoto">ClearShot</string>
+
     <!-- This value may be tweaked to save memory on low RAM devices. The value
          is the percentage of camera preview height/width to scale to. -->
     <integer name="panorama_frame_size_reduction">100</integer>
@@ -25,4 +37,5 @@
     <!-- Force use a specific preview-size
          Example: 1920x1080 -->
     <string name="preview_size_for_photo">1920x1080</string>
+    
 </resources>
