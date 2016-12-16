@@ -47,6 +47,9 @@ persist.speaker.prot.enable=false
 persist.spkr.cal.duration=0
 qcom.hw.aac.encoder=true
 
+# CNE
+persist.cne.feature=1
+
 # Data Power Manager (DPM)
 persist.dpm.feature=7
 persist.env.fastdorm.enabled=true
@@ -77,19 +80,6 @@ ro.sf.lcd_density=480
 ro.opengles.version=196610
 
 # QC vendor extension
-# Enable low power video mode for 4K encode
-vidc.debug.perf.mode=2
-vidc.enc.dcvs.extra-buff-count=2
-
-# Camera
-persist.camera.cpp.duplication=false
-camera.disable_zsl_mode=1
-media.camera.ts.monotonic=0
-
-# Time services
-persist.timed.enable=true
-
-# Perf
 ro.vendor.extension_library=libqti-perfd-client.so
 ro.frp.pst=/dev/block/bootdevice/by-name/config
 drm.service.enabled=true
@@ -124,6 +114,9 @@ ro.qc.sdk.camera.facialproc=false
 
 # Storage
 ro.sys.sdcardfs=true
+
+# Tethering
+net.tethering.noprovisioning=true
 
 # Time services
 persist.timed.enable=true

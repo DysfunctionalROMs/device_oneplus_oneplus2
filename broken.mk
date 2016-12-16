@@ -21,6 +21,7 @@ $(call inherit-product, device/oneplus/oneplus2/device.mk)
 
 # Inherit some common Broken stuff.
 $(call inherit-product, vendor/broken/config/common_full_phone.mk)
+$(call inherit-product, vendor/broken/config/common.mk)
 
 PRODUCT_NAME := broken_oneplus2
 PRODUCT_DEVICE := oneplus2
