@@ -24,8 +24,6 @@ TARGET_OTA_ASSERT_DEVICE := OnePlus2,oneplus2
 
 PLATFORM_PATH := device/oneplus/oneplus2
 
-BOARD_VENDOR := oneplus
-
 # Use Snapdragon LLVM, if available
 TARGET_USE_SDCLANG := true
 
@@ -35,6 +33,7 @@ TARGET_BOARD_INFO_FILE ?= $(PLATFORM_PATH)/board-info.txt
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := MSM8994
 TARGET_NO_BOOTLOADER := true
+BOOTLOADER_GCC_VERSION := arm-eabi-4.8
 
 # Platform
 TARGET_BOARD_PLATFORM := msm8994
@@ -45,7 +44,7 @@ TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
 TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 :=
-TARGET_CPU_VARIANT := generic
+TARGET_CPU_VARIANT := cortex-a53
 
 TARGET_2ND_ARCH := arm
 TARGET_2ND_ARCH_VARIANT := armv7-a-neon
@@ -56,7 +55,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53.a57
 TARGET_CPU_CORTEX_A53 := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-3
+BOARD_KERNEL_CMDLINE := androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x37 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 boot_cpus=0-5 androidboot.selinux=permissive
 BOARD_KERNEL_BASE := 0x00000000
 BOARD_KERNEL_PAGESIZE := 4096
 BOARD_KERNEL_TAGS_OFFSET := 0x00000100
@@ -66,7 +65,7 @@ TARGET_KERNEL_APPEND_DTB := true
 TARGET_KERNEL_ARCH := arm64
 TARGET_KERNEL_HEADER_ARCH := arm64
 TARGET_KERNEL_SOURCE := kernel/oneplus/msm8994
-TARGET_KERNEL_CONFIG := cm_oneplus2_defconfig
+TARGET_KERNEL_CONFIG := oneplus2_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 
 # QCOM hardware
@@ -119,6 +118,7 @@ BOARD_USES_QCNE := true
 ENABLE_CPUSETS := true
 
 BOARD_EGL_CFG := $(PLATFORM_PATH)/egl.cfg
+BOARD_SECCOMP_POLICY := $(PLATFORM_PATH)/seccomp
 
 # GPS
 TARGET_NO_RPC := true
@@ -130,6 +130,8 @@ TARGET_USES_ION := true
 TARGET_USES_NEW_ION_API :=true
 TARGET_USES_C2D_COMPOSITION := true
 USE_OPENGL_RENDERER := true
+TARGET_USES_OVERLAY := true
+MAX_VIRTUAL_DISPLAY_DIMENSION := 2048
 
 MAX_EGL_CACHE_KEY_SIZE := 12*1024
 MAX_EGL_CACHE_SIZE := 2048*1024
@@ -158,6 +160,10 @@ TARGET_NEEDS_PDFIUM_BIGINT := true
 
 # Added to indicate that protobuf-c is supported in this build
 PROTOBUF_SUPPORTED := false
+
+#Enable peripheral manager
+TARGET_PER_MGR_ENABLED := true
+TARGET_FORCE_HWC_FOR_VIRTUAL_DISPLAYS := true
 
 # RIL
 TARGET_RIL_VARIANT := caf
@@ -197,6 +203,7 @@ CONFIG_EAP_PROXY_DUAL_SIM := true
 CONFIG_EAP_PROXY_AKA_PRIME := true
 CONFIG_EAP_PROXY_MSM8994_TARGET := true
 
+
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 67108864
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := f2fs
@@ -220,8 +227,7 @@ BOARD_SEPOLICY_DIRS += $(LOCAL_PATH)/sepolicy
 BOARD_USES_QC_TIME_SERVICES := true
 
 # CM Hardware
-BOARD_HARDWARE_CLASS += $(PLATFORM_PATH)/cmhw
+BOARD_HARDWARE_CLASS += $(LOCAL_PATH)/cmhw
 TARGET_TAP_TO_WAKE_NODE := "/proc/touchpanel/double_tap_enable"
 
-# inherit from the proprietary version
--include vendor/oneplus/oneplus2/BoardConfigVendor.mk
+BOARD_WIDEVINE_OEMCRYPTO_LEVEL := 1

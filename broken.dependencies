@@ -7,8 +7,8 @@
   },
   {
     "remote":     "github",
-    "repository": "Seraph08/proprietary_vendor_oneplus",
+    "repository": "TheMuppets/proprietary_vendor_oneplus",
     "target_path": "vendor/oneplus",
-    "revision":    "n7.0"
+    "revision":    "cm-14.1"
   }
 ]
