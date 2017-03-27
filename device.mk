@@ -138,7 +138,7 @@ PRODUCT_PACKAGES += \
 
 # Doze mode
 PRODUCT_PACKAGES += \
-    OneplusDoze
+    Doze
 
 #Android EGL implementation
 PRODUCT_PACKAGES += libGLES_android
